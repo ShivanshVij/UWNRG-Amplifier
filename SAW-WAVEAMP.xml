@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:\Users\shiva\Desktop\Development\SAW-WAVEAMP\SAW-WAVEAMP.sch</source>
-    <date>11/12/2017 8:46:14 PM</date>
+    <source>C:/Users/shiva/Desktop/Development/Sine-Wave-Amplifier-UWNRG-SAW/SAW-WAVEAMP.sch</source>
+    <date>11/17/2017 2:27:22 AM</date>
     <tool>Eeschema 4.0.7</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Sine Wave Amplifier</title>
         <company>UWNRG</company>
-        <rev>0.5</rev>
-        <date>2017-10-12</date>
+        <rev>1.0</rev>
+        <date>2017-11-17</date>
         <source>SAW-WAVEAMP.sch</source>
         <comment number="1" value="By Shivansh Vij"/>
         <comment number="2" value="PROTOTYPE (UNTESTED)"/>
@@ -28,49 +28,49 @@
     </comp>
     <comp ref="R2">
       <value>1K</value>
-      <footprint>Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <footprint>Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59E01E27</tstamp>
     </comp>
     <comp ref="R1">
       <value>200</value>
-      <footprint>Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <footprint>Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59E01E7A</tstamp>
     </comp>
     <comp ref="J3">
       <value>+15V</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
+      <footprint>TerminalBlock:TerminalBlock_bornier-2_P5.08mm</footprint>
       <libsource lib="conn" part="Conn_01x02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A08C59D</tstamp>
     </comp>
     <comp ref="J2">
       <value>-15V</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
+      <footprint>TerminalBlock:TerminalBlock_bornier-2_P5.08mm</footprint>
       <libsource lib="conn" part="Conn_01x02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A08C7D6</tstamp>
     </comp>
     <comp ref="J1">
       <value>AC Voltage Source</value>
-      <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
+      <footprint>TerminalBlock:TerminalBlock_bornier-2_P5.08mm</footprint>
       <libsource lib="conn" part="Conn_01x02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A08CB86</tstamp>
     </comp>
     <comp ref="R3">
       <value>Filter Resistor</value>
-      <footprint>Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <footprint>Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A08CEDF</tstamp>
     </comp>
     <comp ref="C1">
       <value>Filter Capacitor</value>
-      <footprint>Capacitors_THT:C_Disc_D14.5mm_W5.0mm_P7.50mm</footprint>
+      <footprint>Capacitors_THT:C_Disc_D12.5mm_W5.0mm_P10.00mm</footprint>
       <libsource lib="device" part="C_Small"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A08CF66</tstamp>
@@ -151,33 +151,33 @@
       <uri>C:\Program Files\KiCad\share\kicad\library\conn.lib</uri>
     </library>
     <library logical="lm7171">
-      <uri>C:\Users\shiva\Desktop\Development\SAW-WAVEAMP\lm7171.lib</uri>
+      <uri>C:\Users\shiva\Desktop\Development\Sine-Wave-Amplifier-UWNRG-SAW\lm7171.lib</uri>
     </library>
   </libraries>
   <nets>
     <net code="1" name="GND">
-      <node ref="J1" pin="2"/>
-      <node ref="C1" pin="2"/>
-      <node ref="J3" pin="1"/>
+      <node ref="R3" pin="1"/>
       <node ref="R1" pin="2"/>
+      <node ref="J3" pin="1"/>
+      <node ref="J1" pin="2"/>
       <node ref="J2" pin="1"/>
     </net>
     <net code="2" name="Net-(R1-Pad1)">
-      <node ref="R1" pin="1"/>
       <node ref="R2" pin="2"/>
       <node ref="U1" pin="2"/>
+      <node ref="R1" pin="1"/>
     </net>
-    <net code="3" name="Net-(J1-Pad1)">
-      <node ref="R3" pin="2"/>
+    <net code="3" name="Net-(C1-Pad2)">
+      <node ref="C1" pin="2"/>
       <node ref="J1" pin="1"/>
     </net>
     <net code="5" name="Net-(U1-Pad5)">
       <node ref="U1" pin="5"/>
     </net>
     <net code="6" name="Net-(C1-Pad1)">
-      <node ref="C1" pin="1"/>
+      <node ref="R3" pin="2"/>
       <node ref="U1" pin="3"/>
-      <node ref="R3" pin="1"/>
+      <node ref="C1" pin="1"/>
     </net>
     <net code="7" name="Net-(J2-Pad2)">
       <node ref="J2" pin="2"/>

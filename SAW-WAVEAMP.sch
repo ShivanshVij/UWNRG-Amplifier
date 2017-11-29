@@ -39,8 +39,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Sine Wave Amplifier"
-Date "2017-10-12"
-Rev "0.5"
+Date "2017-11-17"
+Rev "1.0"
 Comp "UWNRG"
 Comment1 "By Shivansh Vij"
 Comment2 "PROTOTYPE (UNTESTED)"
@@ -64,7 +64,7 @@ U 1 1 59E01E27
 P 4800 2200
 F 0 "R2" V 4880 2200 50  0000 C CNN
 F 1 "1K" V 4800 2200 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4730 2200 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 4730 2200 50  0001 C CNN
 F 3 "" H 4800 2200 50  0001 C CNN
 	1    4800 2200
 	0    1    1    0   
@@ -75,7 +75,7 @@ U 1 1 59E01E7A
 P 3450 2700
 F 0 "R1" V 3530 2700 50  0000 C CNN
 F 1 "200" V 3450 2700 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3380 2700 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 3380 2700 50  0001 C CNN
 F 3 "" H 3450 2700 50  0001 C CNN
 	1    3450 2700
 	0    1    1    0   
@@ -125,7 +125,7 @@ U 1 1 5A08C59D
 P 6250 2350
 F 0 "J3" H 6250 2450 50  0000 C CNN
 F 1 "+15V" H 6250 2150 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 6250 2350 50  0001 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 6250 2350 50  0001 C CNN
 F 3 "" H 6250 2350 50  0001 C CNN
 	1    6250 2350
 	0    1    1    0   
@@ -138,7 +138,7 @@ U 1 1 5A08C7D6
 P 4400 3900
 F 0 "J2" H 4400 4000 50  0000 C CNN
 F 1 "-15V" H 4400 3700 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4400 3900 50  0001 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 4400 3900 50  0001 C CNN
 F 3 "" H 4400 3900 50  0001 C CNN
 	1    4400 3900
 	-1   0    0    1   
@@ -181,7 +181,7 @@ U 1 1 5A08CB86
 P 2500 3400
 F 0 "J1" H 2500 3500 50  0000 C CNN
 F 1 "AC Voltage Source" H 2500 3200 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 2500 3400 50  0001 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 2500 3400 50  0001 C CNN
 F 3 "" H 2500 3400 50  0001 C CNN
 	1    2500 3400
 	0    1    1    0   
@@ -207,28 +207,26 @@ Wire Wire Line
 $Comp
 L R R3
 U 1 1 5A08CEDF
-P 3000 3200
-F 0 "R3" V 3080 3200 50  0000 C CNN
-F 1 "Filter Resistor" V 3000 3200 50  0000 C CNN
-F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2930 3200 50  0001 C CNN
-F 3 "" H 3000 3200 50  0001 C CNN
-	1    3000 3200
-	0    1    1    0   
+P 3400 3500
+F 0 "R3" V 3480 3500 50  0000 C CNN
+F 1 "Filter Resistor" V 3400 3500 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P15.24mm_Horizontal" V 3330 3500 50  0001 C CNN
+F 3 "" H 3400 3500 50  0001 C CNN
+	1    3400 3500
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3150 3200 4100 3200
-Wire Wire Line
-	3400 3200 3400 3450
+	3050 3200 4100 3200
 $Comp
 L C_Small C1
 U 1 1 5A08CF66
-P 3400 3550
-F 0 "C1" H 3410 3620 50  0000 L CNN
-F 1 "Filter Capacitor" H 3410 3470 50  0000 L CNN
-F 2 "Capacitors_THT:C_Disc_D14.5mm_W5.0mm_P7.50mm" H 3400 3550 50  0001 C CNN
-F 3 "" H 3400 3550 50  0001 C CNN
-	1    3400 3550
-	1    0    0    -1  
+P 2950 3200
+F 0 "C1" H 2960 3270 50  0000 L CNN
+F 1 "Filter Capacitor" H 2960 3120 50  0000 L CNN
+F 2 "Capacitors_THT:C_Disc_D12.5mm_W5.0mm_P10.00mm" H 2950 3200 50  0001 C CNN
+F 3 "" H 2950 3200 50  0001 C CNN
+	1    2950 3200
+	0    1    1    0   
 $EndComp
 Wire Wire Line
 	3400 3650 3400 3850
@@ -244,4 +242,6 @@ F 3 "" H 3400 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3400 3200
+Wire Wire Line
+	3400 3350 3400 3200
 $EndSCHEMATC
